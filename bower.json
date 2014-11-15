@@ -1,0 +1,22 @@
+{
+	"name": "ACFC",
+	"version": "0.0.0",
+	"homepage": "http://www.accau.org/",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/basire/ACFC.git"
+	},
+	"authors": [
+		"Ray Vafa <vafatabar@gmail.com>",
+		"Basireh Hosseini <basire.h82@gmail.com>"
+	],
+	"description": "Australians Caring For Children",
+	"license": "MIT",
+	"ignore": [
+		"**/.*",
+		"node_modules",
+		"bower_components",
+		"test",
+		"tests"
+	]
+}
