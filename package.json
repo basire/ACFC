@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/basire/ACFC/issues"
   },
-  "homepage": "https://github.com/basire/ACFC"
+  "homepage": "https://github.com/basire/ACFC",
+  "devDependencies": {
+    "grunt": "~0.4.5"
+  }
 }
