@@ -1,0 +1,17 @@
+/*
+ This is the main sass file that joins all partials and other components together.
+ Do NOT put any code here
+*/
+
+$icon-font-path: "/bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
+
+// bower:scss
+@import '../../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap';
+// endbower
+
+@import "partials/variables";
+@import "partials/base";
+@import "partials/layout";
+@import "partials/homepage";
+@import "partials/header";
+@import "partials/footer";
