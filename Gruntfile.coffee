@@ -38,6 +38,38 @@ module.exports = (grunt) ->
 					ext: '.css'
 				]
 
+	# Copies remaining files to places other tasks can use
+		copy:
+			dist:
+				files: [
+					expand: true
+					dot: true
+					cwd: '<%= config.app %>'
+					dest: '<%= config.dist %>'
+					src: [
+						'*.{ico,png,txt}'
+						'.htaccess'
+						'images/{,*/}*.webp'
+						'{,*/}*.html'
+						'{,*/}*.shtml'
+						'styles/fonts/{,*/}*.*'
+					]
+				,
+					expand: true
+					dot: true
+					cwd: '.'
+					src: ['bower_components/bootstrap-sass-official/assets/fonts/bootstrap/*.*']
+					dest: '<%= config.dist %>'
+				]
+
+		uglify:
+			build:
+				src: [
+					'bower_components/jquery/dist/jquery.js'
+					'bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js'
+				]
+				dest: '<%= config.dist %>/scripts/scripts.min.js'
+
 	grunt.registerTask "clean-all", [
 		"clean"
 	]
@@ -45,6 +77,8 @@ module.exports = (grunt) ->
 	grunt.registerTask "build", [
 		"clean"
 		"sass"
+		"uglify"
+		"copy"
 	]
 
 	grunt.registerTask "default", ["build"]
