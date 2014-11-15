@@ -11,8 +11,8 @@ http://www.accau.org/
 
 Authors
 -------
-Basireh Hosseini
-Ray Vafa
+* Basireh Hosseini
+* Ray Vafa
 
 
 Repository
@@ -22,4 +22,4 @@ https://github.com/basire/ACFC
 
 Dependencies
 ------------
--SASS <http://sass-lang.com/>
+* SASS <http://sass-lang.com/>
