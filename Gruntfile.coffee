@@ -49,7 +49,7 @@ module.exports = (grunt) ->
 					src: [
 						'*.{ico,png,txt}'
 						'.htaccess'
-						'images/{,*/}*.webp'
+						'images/*.*'
 						'{,*/}*.html'
 						'{,*/}*.shtml'
 						'styles/fonts/{,*/}*.*'
@@ -57,9 +57,10 @@ module.exports = (grunt) ->
 				,
 					expand: true
 					dot: true
+					flatten: true
 					cwd: '.'
 					src: ['bower_components/bootstrap-sass-official/assets/fonts/bootstrap/*.*']
-					dest: '<%= config.dist %>'
+					dest: '<%= config.dist %>/fonts/'
 				]
 
 		uglify:
