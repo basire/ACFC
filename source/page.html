@@ -25,34 +25,64 @@
 
 <div class="container">
 	<header class="header row">
-		<a href="#" class="col-xs-6">
+		<a href="#" class="col-xs-4">
 			<img src="http://placehold.it/200x200" />
 		</a>
-		<div class="col-xs-6">
+		<div class="col-xs-8">
 			<div class="social">
-				<ul>
-					<li><span class="icon-facebook-squared"></span></li>
-					<li><span class="icon-twitter-squared"></span></li>
-				</ul>
+				<a href="#"><span class="icon-facebook-squared"></span></a>
+				<a href="#"><span class="icon-twitter-squared"></span></a>
 			</div>
-			<nav>
-				<ul>
-					<li>Home</li>
-					<li>About US</li>
-				</ul>
+			<nav class="navbar navbar-default">
+				<div class="container-fluid">
+					<!-- Brand and toggle get grouped for better mobile display -->
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+					</div>
+
+					<!-- Collect the nav links, forms, and other content for toggling -->
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+						<ul class="nav navbar-nav">
+							<li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
+							<li><a href="#">About Us</a></li>
+							<li><a href="#">Sponsor a Child</a></li>
+							<li><a href="#">Donate</a></li>
+							<li><a href="#">Volunteer</a></li>
+							<li><a href="#">Contact us</a></li>
+						</ul>
+					</div>
+				</div>
 			</nav>
 		</div>
 	</header>
 	<div class="page-body">
-		<img class="page-hero" src="#">
-		<h1>Page</h1>
-		<div>breadcrumb</div>
+		<img class="page-hero" src="http://placehold.it/500x200">
+		<div class="page-header">
+			<h1>Page heading</h1>
+		</div>
+		<ol class="breadcrumb">
+			<li><a href="#">Home</a></li>
+			<li><a href="#">Library</a></li>
+			<li class="active">Data</li>
+		</ol>
 		<div class="row">
 			<aside class="col-xs-3">
-				<p>Sidebar!</p>
+				<div class="list-group">
+					<a href="#" class="list-group-item active">Cras justo odio</a>
+					<a href="#" class="list-group-item">Dapibus ac facilisis in</a>
+					<a href="#" class="list-group-item">Morbi leo risus</a>
+					<a href="#" class="list-group-item">Porta ac consectetur ac</a>
+					<a href="#" class="list-group-item">Vestibulum at eros</a>
+				</div>
 			</aside>
 			<div class="col-xs-9">
-				<h3>Main content</h3>
+				<h3>Article title</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras id faucibus erat. Ut blandit leo lectus, id elementum leo dictum quis. Vestibulum euismod bibendum justo. Sed ex ex, luctus sed ligula vel, feugiat dictum ipsum. Sed porttitor ante et mollis rhoncus. Sed vestibulum metus nisi, sit amet venenatis augue pharetra eu. In hac habitasse platea dictumst. Nulla gravida nisi et urna malesuada congue. Vestibulum ultricies non neque quis maximus. Vestibulum eget porta magna. Etiam dignissim luctus tincidunt. Donec ac leo dui. Cras consequat commodo erat, nec aliquet nulla egestas id. Integer eros sapien, ullamcorper eu ex et, venenatis fermentum nulla.</p>
 			</div>
 		</div>
 	</div>
