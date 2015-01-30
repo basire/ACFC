@@ -18,14 +18,14 @@ module.exports = (grunt) ->
 	# Empties folders to start fresh
 		clean:
 			dist: 'dist'
-			server: '.tmp'
+			tmp: '.tmp'
 
 	# Compiles Sass to CSS and generates necessary files if requested
 		sass:
 			options:
 				trace: true
 				lineNumbers: true
-				style: 'compressed'
+				style: 'uncompressed'
 				loadPath: [
 					'bower_components'
 				]
@@ -34,9 +34,18 @@ module.exports = (grunt) ->
 					expand: true
 					cwd: '<%= config.app %>/styles'
 					src: ['styles.scss']
-					dest: '<%= config.dist %>/styles'
+					dest: '<%= config.tmp %>/styles'
 					ext: '.css'
 				]
+
+		cssmin:
+			target:
+				files:
+					'<%= config.dist %>/styles/styles.min.css': [
+						'<%= config.app %>/styles/fontello/css/*.*'
+						'<%= config.tmp %>/styles/styles.css'
+					]
+
 
 	# Copies remaining files to places other tasks can use
 		copy:
@@ -61,6 +70,13 @@ module.exports = (grunt) ->
 					cwd: '.'
 					src: ['bower_components/bootstrap-sass-official/assets/fonts/bootstrap/*.*']
 					dest: '<%= config.dist %>/fonts/'
+				,
+					expand: true
+					dot: true
+					flatten: true
+					cwd: '.'
+					src: ['source/styles/fontello/fonts/*.*']
+					dest: '<%= config.dist %>/fonts/'
 				]
 
 		uglify:
@@ -80,6 +96,7 @@ module.exports = (grunt) ->
 		"sass"
 		"uglify"
 		"copy"
+		"cssmin"
 	]
 
 	grunt.registerTask "default", ["build"]
