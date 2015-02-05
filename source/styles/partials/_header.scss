@@ -1,12 +1,37 @@
 .header {
 	padding: 5px;
 
-	.social {
+	.social-links {
 		padding: 5px;
 		text-align: right;
 
 		span {
 			font-size: 30px;
 		}
+	}
+
+  .form-search {
+	padding: 5px;
+	text-align: right;
+
+	.search-query {
+	  color: #959595;
+	  width: 150px;
+	  border: 0;
+	  background: #f2f2f2;
+	  font-family: 'Roboto', sans-serif;
+	  font-size: 14px;
+	  margin: 0;
+	  padding: 0;
+	  height: 30px;
+	  line-height: 30px;
+	  outline: none;
+	}
+  }
+}
+
+@media (max-width: $screen-md) {
+	.header {
+		text-align: center;
 	}
 }
